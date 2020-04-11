@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,14 +18,21 @@
   },
   "homepage": "https://github.com/SunjaeJadenLee/recNodeJSServer#readme",
   "dependencies": {
+    "aws-sdk": "^2.651.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "expo-server-sdk": "^3.4.0",
     "express": "^4.17.1",
+    "googleapis": "^48.0.0",
+    "md5": "^2.2.1",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "nodemon": "^2.0.2",
     "pg": "^7.18.2",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.5",
-    "sequelize-cli": "^5.5.1"
+    "sequelize-cli": "^5.5.1",
+    "sharp": "^0.25.2",
+    "uuid": "^7.0.3"
   }
 }

@@ -2,32 +2,27 @@ const Sequelize = require('Sequelize')
 const sequelize = require('../dbConnect').sq
 
 const Model = Sequelize.Model;
-class User extends Model{}
-User.init({
+class Ing_category_detail extends Model{}
+Ing_category_detail.init({
     // attributes
     id: {
       type: Sequelize.STRING, 
       primaryKey:true, 
       allowNull: false
     },
-    password: {
+    category_id:{
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull:false
     },
-    nickname:{
-        type:Sequelize.STRING
-    },
-    email:{
-        type:Sequelize.STRING
-    },
-    recipeId:{
-        type:Sequelize.STRING
+    name: {
+      type: Sequelize.STRING
+      // allowNull defaults to true
     }
   }, {
     sequelize,
-    modelName: 'users',
+    modelName: 'ingredient_category_detail',
     timestamps:false
     // options
   });
 
-  module.exports.User = User
+  module.exports.Ingredient_category_detail = Ing_category_detail
