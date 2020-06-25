@@ -36,5 +36,23 @@ module.exports = {
             }],
             acl: 'public-read-write'
         })
+    }),
+
+    uploadProfile: multer({
+        storage:multerS3({
+            s3:S3,
+            bucket:'recipeappbucket',
+            key:function (req,file,cb){ 
+                let extension = file.originalname;
+                cb(null,'userProfileImage/'+req.body.email+'_profile'+extension);
+            },
+            transforms:[{
+                id:'original', 
+                transform:function (req,file,cb){
+                    cb(null,sharp().resize(100, 100).max())
+                }
+            }],
+            acl: 'public-read-write'
+        })
     })
 }

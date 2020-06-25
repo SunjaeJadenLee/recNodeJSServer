@@ -10,19 +10,21 @@ User.init({
       primaryKey:true, 
       allowNull: false
     },
-    password: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
+    email:{
+      type:Sequelize.STRING
+    }, 
     nickname:{
         type:Sequelize.STRING
-    },
-    email:{
-        type:Sequelize.STRING
+    }, 
+    profileUrl:{
+      type:Sequelize.STRING
+    }, 
+    platform:{
+      type:Sequelize.STRING
     },
     recipeId:{
-        type:Sequelize.STRING
-    }
+      type:Sequelize.STRING
+  },
   }, {
     sequelize,
     modelName: 'users',

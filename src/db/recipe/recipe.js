@@ -42,10 +42,22 @@ User_recipes.init({
     recipe_state: {
         type: Sequelize.JSON
     },
+    user:{
+        type:Sequelize.JSON
+    }, 
+    createdAt:{
+        type:Sequelize.DATE
+    },
+    updatedAt:{
+        type:Sequelize.DATE
+    },
+    timeStamp:{
+        type:Sequelize.NUMBER
+    }
 }, {
         sequelize,
         modelName: 'user_recipes',
-        timestamps: false
+        timestamps: true
         // options
     });
 
