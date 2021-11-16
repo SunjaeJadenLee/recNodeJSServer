@@ -19,7 +19,7 @@
   "homepage": "https://github.com/SunjaeJadenLee/recNodeJSServer#readme",
   "dependencies": {
     "@firebase/storage": "^0.3.32",
-    "aws-sdk": "^2.651.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "expo-server-sdk": "^3.4.0",
